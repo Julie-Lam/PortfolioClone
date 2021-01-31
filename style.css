@@ -1,0 +1,556 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/*--- FONT SETTINGS ---*/
+
+body {
+    font-family: 'PT Serif', serif;
+    overflow-x: hidden; 
+    letter-spacing: 3px; 
+}
+/*---------------------------------------------------------------*/
+                
+                        /*------ HOME PAGE ------*/
+
+/*--- HERO BANNER SECTION ---*/
+
+    /*--- BANNER BACKGROUND ---*/
+.heroBanner {
+    background: linear-gradient(to right, black 50%, #181818 50%); /* Solid black from start to 50% mark, and then solid #181818 from 50% mark onwards */ 
+    height: 100vh; 
+    width: 100vw; /* Sets width to viewport, incl. vertical scroll bar */
+    max-width: 100%; /* Prevents horizontal scroll bar */
+    border-bottom: #988345 solid 5px; 
+}
+    /*-------------------------*/
+
+    /*--- NAV BAR ---*/
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 30px; 
+    height: 10%; 
+}
+
+nav .fas {
+    color: white; 
+    font-size: 50px; 
+}
+
+.menu {
+    display: flex;  
+    align-items: center; 
+    cursor: pointer; 
+}
+
+.menu span {
+    color: white; 
+    margin-right: 3px; 
+    font-size: 20px; 
+}
+
+.burger .line {
+    background-color: white; 
+    height: 3.5px; 
+    width: 30px; 
+    margin: 3px; 
+}
+
+        /*--- NAV BAR MENU HOVER EFFECT ---*/
+.menu:hover span {
+    color: #988345; 
+    transition: .3s; 
+}
+
+    /*--- BANNER TEXT ---*/
+.bannerText {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    height: 90%; 
+    justify-content: center; 
+}
+
+.bannerHeading {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.bannerHeading .fas {
+    color: #988345; 
+    margin-bottom: 10px; 
+}
+
+.bannerHeading h1 {
+    color: #988345;  
+    margin-bottom: 10px; 
+    font-size: 40px; 
+}
+
+.whiteBar {
+    background-color: white; 
+    height: 9px; 
+    width: 40px; 
+    margin-bottom: 10px;
+}
+
+.bannerSubheading {
+    color: white; 
+    display: flex; 
+    width: 20%; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.bannerSubheading h4 {
+    margin: 10px; 
+    text-align: center; 
+}
+
+            /*--- BANNER TEXT ARROW ANIMATION ---*/
+.bannerText .fa-chevron-down {
+    color: white; 
+    font-size: 40px; 
+    position: relative; 
+    top: 30vh;
+    animation-name: jump; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; 
+}
+
+/*---------------------------------------------------------------*/
+
+
+/*--- ENTIRE HERO MENU ---*/
+    
+    /*--- HERO MENU ---*/
+.hero-menu {
+    height: 100vh; 
+    background-color: black; 
+    opacity: 0.95;  
+    width: 100vw;
+    max-width: 100%; 
+    padding: 30px;
+    position: absolute; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    z-index: 1; 
+}
+
+        /*--- CLOSE FEATURE ---*/
+.close {
+    display: none; 
+}
+
+    /*--- TOP MENU BAR ---*/
+.logo-and-close {
+    display: flex; 
+    justify-content: space-between; 
+    height: 10vh; 
+}
+
+.logo-and-close i {
+    color: white; 
+    font-size: 50px; 
+    cursor: pointer; 
+}
+
+    /*--- NAV OPTIONS ---*/
+.nav-bar ul {
+    list-style: none; 
+    height: 60vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.nav-bar a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 70px;  
+}
+
+.nav-bar li {
+    margin-top: 30px;
+}
+
+li.active a::after {
+    content: ""; 
+    background-color: #988345; 
+    height: 7px;
+    width: 4%;
+    display: block; 
+    margin-top: 20px; 
+}
+
+li.active::after {
+    content: ""; 
+    background-color: #40371d; 
+    height: 4px; 
+    width: 95%;  
+    display: block; 
+    position: relative; 
+    top: -4px; 
+    left: 4.5em; 
+}
+
+li a::after {
+    content: ""; 
+    width: 4%; 
+    height: 7px; 
+    background-color: #b3b9c0; 
+    display: block;
+}
+
+li::after {
+    content:""; 
+    background-color: #2f3133; 
+    display: block; 
+    position: relative; 
+    top: -4px;
+    left: 70px; 
+    height: 4px;
+    width: 95%; 
+}
+
+            /*--- HERO MENU NAV BAR HOVER EFFECTS---*/
+.nav-bar li:hover a {
+    color: #988345; 
+    transition: .3s; 
+}
+
+.nav-bar li:hover:after {
+    background-color: #40371D; 
+    transition: .3s; 
+}
+
+.nav-bar li:hover a:after {
+    background-color: #988345;  
+    transition: .3s; 
+}
+
+.copyright {
+    color: white; 
+}
+/*---------------------------------------------------------------*/
+
+
+/*--- PROJECT SECTION ---*/
+
+    /*--- LAYOUT ---*/
+#projects {
+    display: flex; 
+    width: 100vw; 
+    max-width: 100%; 
+    flex-wrap: wrap; 
+}
+
+#projects a {
+    flex: 1; 
+    flex-basis: 400px;
+    height: 50vh; 
+}
+
+    /*--- EA. PROJECT BOX ---*/
+.project { 
+    height: 100%; 
+    width: 100%;
+    position: relative; 
+}
+
+.project::before {
+    background-position: center; 
+    background-size: cover; 
+    filter: grayscale(100%); 
+    transition: filter 1.5s; 
+    height: 100%; 
+    width: 100%; 
+    content: ""; 
+    display: block; 
+}
+
+.project.one::before, 
+.project.four::before {
+    background-image: url('Images/habitual.png')
+}
+
+.project.two::before, 
+.project.five::before {
+    background-image: url('Images/jac.png')
+}
+
+.project.three::before, 
+.project.six::before {
+    background-image: url(Images/braun.png)
+}
+
+
+    /*--- PROJECT NO. ---*/
+#projects .project h1 {
+    color: #988345; 
+    font-size: 50px; 
+    border: 4px #988345 solid; 
+    border-radius: 100%; 
+    width: 1.5em; 
+    height: 1.5em; 
+    text-align: center;  
+    position: absolute; 
+    left: 50%; 
+    margin-left: -0.75em; 
+    bottom: 50%;
+    margin-bottom: -0.75em;
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in;  /* No. dissapears & Enlarges upon hover*/ 
+}
+
+    /*--- PROJECT CONTENT ---*/
+.projectTitle {
+    position: absolute; 
+    left: 10%; 
+    bottom: 5%; 
+    transition: transform 1s, background 1s;  /* Title moves up hover & bg color appears*/
+    width: 100%; 
+} 
+
+    /*--- PROJECT TITLE ---*/
+.projectTitle h4 {
+    color: white;     
+}
+
+.projectTitle h4::after {
+    content: ''; 
+    background-color: #988345; 
+    transition: background-color 300ms linear; 
+    width: 25px; 
+    height: 3px; 
+    position: absolute; 
+    left: 0; 
+    top: 20px; 
+}
+
+.projectTitle h4::before {
+    content: ''; 
+    display: block;
+    background-color: #2f3133; 
+    height: 2px; 
+    position: relative;
+    top: 21px; 
+    left: 30px; 
+    width: 100px; 
+}
+
+    /* PROJECT DESCRIPTION */
+
+.projectTitle p {
+    color: lightgray; 
+    opacity: 0; 
+    transition: opacity 1s; /* Appears upon hover */
+}
+
+    /* ON HOVER */
+
+.project:hover:before {
+    filter: grayscale(0%); /* Project BG image has color */
+}
+
+.project:hover .projectTitle {
+    transform: translateY(-50%); /* Project content moves up*/
+    background: rgba(0,0,0,0.5);  
+}
+
+.project:hover h4::before {
+    background-color: #40371d; 
+    transition: background-color 300ms linear; 
+}
+
+.project:hover .projectTitle p {
+    opacity: 1; /* Project description appears */
+}
+
+.project:hover h1 {
+    opacity: 0; /* Project number dissapears and moves forward */
+    transform: perspective(100px) translateZ(10px); 
+}
+
+
+
+                                    /*------ CONTACT PAGE------*/
+
+.contact-page {
+    background-color: #f2f1ed;  
+    height: 100vh; 
+    width: 100vw; 
+    max-width: 100%; 
+}
+
+/*--- NAV BAR ---*/
+
+.contact-page nav i, 
+.contact-page nav .menu span {
+    color: black; 
+}
+
+.contact-page nav .menu .line {
+    background-color: black; 
+}
+
+/*--- TEXT SECTION ---*/
+
+.contact-wrapper {
+    width: 70%; 
+    margin: 10vh auto; 
+}
+
+.contact-page .text-section {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    position: relative; 
+}
+
+    /*--- LETS GET IN TOUCH ---*/
+.contact-page .text-section h1 {
+    font-size: 45px; 
+    margin-bottom: 20px; 
+}
+
+.contact-page .text-section h1::after {
+    content: ''; 
+    width: 30px; 
+    height: 5px; 
+    background-color: #988345; 
+    position: absolute; 
+    top: 1.5em; 
+    left: 50%; 
+    margin-left: -15px; 
+}
+    /*--- JULIE LAM ---*/
+.contact-page .text-section h2 {
+    margin-bottom: 10px; 
+    font-size: 25px; 
+}
+
+    /*--- EMAIL ---*/
+
+.text-section :nth-child(3) {  /* Selects the parent, targets the 3rd child */
+    color: #988345; 
+}
+
+    /*--- LINK SECTION ---*/
+.links-section {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    margin-top: 15vh; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+
+
+.links-section .link {
+    flex-basis: 45%; 
+    margin-bottom: 30px; 
+    position: relative;  
+}
+
+.link h4 {
+    font-size: 18px;
+    margin-bottom: 0.5em; 
+}
+
+.link h4::before {
+    content: ''; 
+    background-color: #988345; 
+    height: 5px; 
+    width: 30px; 
+    position: absolute; 
+    top: 1.5em;  
+}
+
+.link h4::after {
+    content: ''; 
+    background-color: #b3b9c0;
+    height: 3px; 
+    width: 90%; 
+    position: absolute; 
+    top: 1.55em; 
+    left: 35px; 
+    
+}
+
+.link a {
+    font-size: 14px; 
+    color: #988345; 
+}
+
+.contact-page nav .menu:hover .menu-span {
+    color: #988345;  
+    transition: color .3s; 
+}
+
+                    /*------ ABOUT PAGE------*/
+
+.about-page {
+    background-color: #f2f1ed;  
+    height: 100vh; 
+    width: 100vw; 
+    max-width: 100%; 
+}
+
+.about-page .menu-span,
+.about-page .fa-code {
+    color: black; 
+}
+
+.about-page nav .menu .line {
+    background-color: black; 
+}
+
+.description {
+    width: 70%; 
+    margin: 10vh auto; 
+}
+
+.about-page .description h1 {
+    font-size: 45px; 
+    margin-bottom: 20px; 
+}          
+
+
+                /*------ GENERIC PROJECT PAGE------*/
+
+.project-page {
+    background-color: #f2f1ed;  
+    height: 100vh; 
+    width: 100vw; 
+    max-width: 100%; 
+}
+
+.project-page .menu-span,
+.project-page .fa-code {
+    color: black; 
+}
+
+.project-page nav .menu .line {
+    background-color: black; 
+}
+
+
+/* ANIMATIONS */
+
+@keyframes jump {
+    0% {
+        transform: translateY(0px)
+        }
+    50% {
+        transform: translateY(15px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
